@@ -1,0 +1,71 @@
+/* ==========================================================
+   🧩 VIDA E ESPERANÇA | LAYOUT.CSS
+   Estrutura de Grid + Responsividade
+   ========================================================== */
+
+/* Grid de 12 colunas */
+.container-grid {
+  display: grid;
+  grid-template-columns: repeat(12, 1fr);
+  gap: var(--espaco-3);
+  padding: var(--espaco-4);
+}
+
+/* Cabeçalho e rodapé ocupam 12 colunas */
+header, footer {
+  grid-column: span 12;
+}
+
+/* Conteúdo principal (exemplo) */
+main {
+  grid-column: span 8;
+}
+
+aside {
+  grid-column: span 4;
+  background: var(--cor-cinza-claro);
+  padding: var(--espaco-2);
+  border-radius: 8px;
+}
+
+/* Banner */
+.banner {
+  grid-column: span 12;
+  background: var(--cor-destaque);
+  padding: var(--espaco-4);
+  text-align: center;
+  border-radius: 12px;
+}
+
+/* 📱 Responsividade */
+@media (max-width: 1200px) {
+  main {
+    grid-column: span 12;
+  }
+}
+
+@media (max-width: 1024px) {
+  .container-grid {
+    padding: var(--espaco-3);
+  }
+}
+
+@media (max-width: 768px) {
+  .banner h1 {
+    font-size: var(--fonte-grande);
+  }
+
+  aside {
+    grid-column: span 12;
+  }
+}
+
+@media (max-width: 480px) {
+  body {
+    font-size: var(--fonte-pequena);
+  }
+
+  .container-grid {
+    gap: var(--espaco-2);
+  }
+}

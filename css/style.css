@@ -1,0 +1,157 @@
+/* ======= Override do header para garantir tema preto ======= */
+/* Coloque isto no início do css/style.css ou components.css */
+
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap');
+
+/* ==========================
+   TEMA PRETO E BRANCO
+   ========================== */
+
+body {
+  font-family: 'Inter', sans-serif;
+  background-color: #fff; /* ⚠️ corrigido: estava "write" (erro de digitação) */
+  color: #000; /* Texto preto no fundo branco */
+  margin: 0;
+  padding: 0;
+}
+
+/* ======= CABEÇALHO ======= */
+header {
+  background-color: #000 !important; /* Fundo preto */
+  color: #fff !important; /* Texto branco */
+  border-bottom: 2px solid #fff;
+  position: sticky;
+  top: 0;
+  z-index: 100;
+  padding: 15px 0;
+}
+
+/* Links do cabeçalho */
+header a {
+  color: #fff !important;
+  text-decoration: none;
+  margin: 0 15px;
+  font-weight: 500;
+  transition: all 0.3s ease;
+}
+header a:hover {
+  background-color: #fff !important;
+  color: #000 !important;
+  text-decoration: none;
+  border-radius: 6px;
+}
+
+/* ======= NAVEGAÇÃO ======= */
+nav {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 1rem 2rem;
+}
+nav ul {
+  list-style: none;
+  display: flex;
+  gap: 1.5rem;
+  margin: 0;
+  padding: 0;
+}
+nav li {
+  position: relative;
+}
+
+/* Submenu */
+nav ul li ul {
+  display: none;
+  position: absolute;
+  top: 35px;
+  left: 0;
+  background-color: #000;
+  border: 1px solid #fff;
+  border-radius: 8px;
+  list-style: none;
+  min-width: 180px;
+  padding: 8px 0;
+}
+nav ul li:hover ul {
+  display: block;
+}
+nav ul li ul li a {
+  display: block;
+  padding: 10px 20px;
+}
+nav ul li ul li a:hover {
+  background-color: #fff;
+  color: #000;
+}
+
+/* ======= MENU MOBILE ======= */
+.menu-toggle {
+  display: none;
+  background: none;
+  border: 2px solid #fff;
+  color: #fff;
+  font-size: 1.5rem;
+  padding: 5px 10px;
+  border-radius: 6px;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+.menu-toggle:hover {
+  background-color: #fff;
+  color: #000;
+}
+
+/* Menu responsivo */
+@media (max-width: 768px) {
+  nav ul {
+    display: none;
+    flex-direction: column;
+    width: 100%;
+    background-color: #000;
+    border-top: 1px solid #fff;
+    text-align: center;
+    padding: 1rem 0;
+  }
+  nav ul.show {
+    display: flex;
+  }
+  .menu-toggle {
+    display: block;
+  }
+}
+
+/* ======= BOTÕES ======= */
+button,
+.btn {
+  background-color: #fff;
+  color: #000;
+  border: 2px solid #000;
+  padding: 10px 20px;
+  font-weight: 600;
+  border-radius: 8px;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+button:hover,
+.btn:hover {
+  background-color: #000;
+  color: #fff;
+  border-color: #fff;
+}
+
+/*
+ * FORÇA A CHAVE PIX (QUE O NAVEGADOR PENSA SER UM E-MAIL)
+ * A PARECER UM TEXTO NORMAL.
+ */
+.pix-key a {
+  color: #fff !important;
+  text-decoration: none !important;
+  cursor: text;
+  pointer-events: none;
+}
+
+/* ======== Textos ======== */
+.texto-preto {
+  color: #000000;
+}
+

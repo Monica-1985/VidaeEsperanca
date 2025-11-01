@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description"
+    content="A ONG Vida e Esperança transforma comunidades através da educação, saúde e desenvolvimento. Junte-se a nós!">
+  <title>ONG Vida e Esperança - Início</title>
+
+  <link rel="stylesheet" href="css/style.css">
+  <link rel="stylesheet" href="css/layout.css">
+  <link rel="stylesheet" href="css/components.css">
+
+  <script src="https://cdn.tailwindcss.com"></script>
+
+  <style>
+    @import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap');
+
+    body {
+      font-family: 'Inter', sans-serif;
+    }
+  </style>
+</head>
+
+<body class="bg-gray-50 text-gray-800 dark:bg-gray-900 dark:text-gray-200">
+
+  <header class="bg-blue-800 shadow-md dark:bg-blue-800">
+    <nav class="container mx-auto px-6 py-4 flex justify-between items-center">
+      <h1 class="text-3xl font-bold text-teal-600 dark:text-teal-500">Vida e Esperança</h1>
+      <ul class="flex space-x-6">
+        <li><a href="index.html" class="text-teal-600 font-semibold border-b-2 border-teal-600 pb-1 dark:text-teal-500 dark:border-teal-500">Início</a></li>
+        <li><a href="projetos.html" class="text-gray-600 hover:text-teal-600 transition duration-300 dark:text-gray-300 dark:hover:text-teal-500">Projetos</a></li>
+        <li><a href="cadastro.html" class="text-gray-600 hover:text-teal-600 transition duration-300 dark:text-gray-300 dark:hover:text-teal-500">Cadastro</a></li>
+      </ul>
+      <button class="menu-toggle">☰</button>
+    </nav>
+  </header>
+
+  <main class="container mx-auto px-6 py-12">
+
+    <section class="mb-16">
+     <h2 class="text-4xl font-bold text-blue-800 mb-10 text-center">Sobre Nossa Organização</h2>
+      <div class="flex flex-col md:flex-row items-center gap-8">
+        
+        <div class="md:w-1/2">
+          <p class="text-lg leading-relaxed mb-4">
+            A ONG Vida e Esperança é dedicada a transformar comunidades através da educação, saúde e desenvolvimento
+            sustentável. Fundada em 2025, nossa missão é criar oportunidades para que todos possam alcançar seu
+            potencial máximo.
+          </p>
+          <p class="text-lg leading-relaxed mb-4">
+            Acreditamos no poder da ação coletiva e no impacto duradouro do voluntariado. Junte-se a nós e faça parte
+            dessa mudança.
+          </p>
+
+          <p class="text-lg leading-relaxed mb-4">
+            Nosso trabalho é movido pela fé na transformação social por meio da empatia e da união.
+            Cada ação realizada é fruto da colaboração entre voluntários, doadores e parceiros
+            que acreditam em um futuro mais justo e humano.
+          </p>
+
+          <h3 class="text-2xl font-bold text-gray-700 dark:text-gray-100 mt-6 mb-2">Missão</h3>
+          <p class="text-lg leading-relaxed mb-4">
+            Promover o bem-estar e a inclusão social de pessoas em situação de vulnerabilidade,
+            oferecendo apoio material, emocional e educacional.
+          </p>
+
+          <h3 class="text-2xl font-bold text-gray-700 dark:text-gray-100 mt-6 mb-2">Visão</h3>
+          <p class="text-lg leading-relaxed mb-4">
+            Ser referência em ações de solidariedade e sustentabilidade,
+            inspirando comunidades a multiplicarem gestos de amor e esperança.
+          </p>
+
+          <h3 class="text-2xl font-bold text-gray-700 dark:text-gray-100 mt-6 mb-2">Valores</h3>
+          <ul class="list-disc list-inside text-lg leading-relaxed">
+            <li>Respeito à dignidade humana;</li>
+            <li>Transparência e responsabilidade social;</li>
+            <li>Solidariedade e empatia;</li>
+            <li>Comprometimento com a transformação social.</li>
+          </ul>
+        </div> <div class="md:w-1">
+          <img src="imagens/imagem2.jpg" alt="Logo da ONG Vida e Esperança" width="800" class="rounded-lg shadow-md">
+        </div> </div> <section class="bg-white px-12 rounded-lg shadow-lg">
+     <h2 class="text-3xl font-bold text-black mb-6 text-center">Entre em Contato</h2>
+  
+  </section>
+      <div class="grid grid-cols-1 md:grid-cols-3 gap-8 text-center">
+        <div>
+          <h3 class="text-xl font-semibold text-teal-600 dark:text-teal-500 mb-2">Endereço</h3>
+          <p>Rua das Flores, 123</p>
+          <p>Cidade Exemplo, Estado, CEP 12345-678</p>
+        </div>
+        <div>
+          <h3 class="text-xl font-semibold text-teal-600 dark:text-teal-500 mb-2">Telefone</h3>
+          <p>(11) 98765-4321</p>
+          <p>Segunda a Sexta, 9h às 18h</p>
+        </div>
+        <div>
+          <h3 class="text-xl font-semibold text-teal-600 dark:text-teal-500 mb-2">Email</h3>
+          <p>monicasena282@gmail.com</p>
+          <p>Respondemos em até 24h</p>
+        </div>
+      </div>
+    </section>
+
+  </main>
+
+  <footer class="bg-gray-800 text-white mt-16 py-8">
+    <div class="container mx-auto px-6 text-center">
+      <p>&copy; 2025 Vida e Esperança. Todos os direitos reservados.</p>
+    </div>
+  </footer>
+
+  <script src="js/script.js"></script>
+
+  <script>
+    const menuToggle = document.querySelector('.menu-toggle');
+    const navLinks = document.querySelector('nav ul');
+    menuToggle.addEventListener('click', () => {
+      navLinks.classList.toggle('show');
+    });
+  </script>
+
+</body>
+</html>
